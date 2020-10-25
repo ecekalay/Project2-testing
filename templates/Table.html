@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PropertyCovid19</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/analytics">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link waves-effect waves-light" href="/">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="/map">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="/table">Table</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="/analytics">Analytics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="/documentation">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="/news">News</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row margin-top-50">
+            <div class="col-md-2">
+                <aside class="filters">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Filter Search</div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <ul class="list-group" id="filters">
+                                        <li class="filter list-group-item">
+                                            <label for="date">Enter a Date</label>
+                                            <input class="form-control" id="datetime" type="text"
+                                                placeholder="1/11/2011">
+                                        </li>
+                                        <li class="filter list-group-item">
+                                            <label for="city">Enter a city</label>
+                                            <input class="form-control" id="city" type="text" placeholder="New York">
+                                        </li>
+                                        <li class="filter list-group-item">
+                                            <label for="state">Enter a state</label>
+                                            <input class="form-control" id="state" type="text" placeholder="New York">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                            </form>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-md-10">
+                <div id="table-area" class="">
+                    <table id="prop-table" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th class="table-head">Date</th>
+                                <th class="table-head">City</th>
+                                <th class="table-head">State</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <span class="bottom">Property Values and Covid19</span>
+    </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+    <script src="/static/js/data.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
